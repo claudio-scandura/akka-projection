@@ -85,6 +85,7 @@ lazy val kafka =
     .dependsOn(core)
     .dependsOn(testkit % Test)
     .dependsOn(slick % "test->test;it->it")
+    .dependsOn(jdbc % "test->test;it->it")
 
 lazy val examples = project
   .configs(IntegrationTest.extend(Test))
